@@ -1,0 +1,91 @@
+body {
+    position: relative;
+}
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#intro{
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9em;
+}
+
+img {
+  z-index : -1 ;
+  position : absolute;
+  top: -30px;
+  left: 750px;
+  width: 50%;
+}
+
+.racing-sans-one-regular, h1 {
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F489BF;
+}
+
+.kite-one-regular, h2 {
+  font-family: "Kite One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left : 20px;
+  color: #FEC26E;
+}
+
+/*ajutement des graphes et leurs paragraphes*/
+
+.flex-graph{
+  display: flex;
+  
+}
+
+.flex-graph div{
+  width: 100%;
+}
+
+.flex-graph p{
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 50px;
+  width: 40%;
+  font-size: 0.8em;
+}
+
+/*bouton top */
+
+.top{
+  background-color: #FEC26E;
+    color: white;
+    padding: 10px;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 25px;
+    right: 4%;
+}
+
+.top:hover{
+   background-color: #e6ac5c;
+}
+
+@media (max-width: 1023px){
+  .flex-graph {
+    display: block;
+
+  }
+
+  .flex-graph p, #intro {
+    width: 100%;
+    margin : 15px;
+  }
+
+  img{
+    display: none;
+  }
+
+  .top{
+    display :none;
+  }
+}
