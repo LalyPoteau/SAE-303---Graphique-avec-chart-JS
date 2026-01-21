@@ -1,5 +1,9 @@
 # SAE 303
 
+## Compétence mobilisé : 
+- Javascript
+- Librairie ChartJS
+
 ## Equipe :
 
 - Poteau Laly
@@ -20,5 +24,6 @@
 Une séparation des données en 3 pour visualiser du plus performants au moins performants.
 On souhaite garder des couleurs pastels pour donner un certain dynasmisme à la page.
 D'où la flèche et l'utilisation des typo assez dynamique est épaisse qui attire l'attention.
+
 
 Lien vers maquette d'inspiration : https://www.figma.com/design/VdfM43WGyMbuCpmnW15vyo/Untitled?node-id=0-1&t=Y2zFRYqkhw6uOGue-1
