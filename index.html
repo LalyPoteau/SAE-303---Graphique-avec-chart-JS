@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance des Solveurs</title>
+    <link rel="stylesheet" href="src/style/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="container">
+<h1>Performance des Solveurs</h1>
+    <p id="intro">Cette analyse présente les résultats d'une campagne d'expérimentation visant à mesurer l'efficacité de plusieurs solveurs face à des problèmes combinatoires complexes. Chaque instance a été soumise à un temps limite de 10 000 secondes. Les résultats sont classifiés selon trois états : SAT (solution trouvée), UNSAT (inexistence de solution prouvée) ou UNKNOWN (temps limite dépassé). En nous appuyant sur les données structurelles des problèmes (nombre de variables, clauses et types de contraintes comme AllDifferent), nous explorons ici la capacité de chaque algorithme à traiter des structures de données variées, allant de grilles logiques à des benchmarks industriels.</p>
+    <img src="src/img/fleche.gif" alt="fleche graphe" />
+    <h2>Les meilleurs performances</h2>
+    <div class="flex-graph">
+        <div style="width: 600px;"><canvas id="fort"></canvas></div>
+        <p>Ce groupe se distingue par une efficacité constante sur toutes les familles de problèmes (ex: Sudoku, Queens), avec un temps cumulé très bas. Ces solveurs, particulièrement Picat, gèrent de manière optimale les instances possédant un grand nombre de variables et de contraintes complexes (comme allDifferent), limitant presque totalement les statuts UNKNOWN.</p>
+    </div>
+
+    <h2>Les performance dans la moyenne</h2>
+    <div class="flex-graph">
+    <div style="width: 600px;"><canvas id="mid"></canvas></div>
+    <p>Ces solveurs affichent des performances honorables mais montrent des signes de faiblesse lorsque la taille du problème (nombre de clauses et de variables) augmente. Leur temps de résolution global est plus élevé car ils basculent vers le statut UNKNOWN sur les familles de benchmarks les plus denses, là où l'élite parvient encore à trouver une solution.</p>
+    </div>
+    <h2>Les moins bonnes performance</h2>
+    <div class="flex-graph">
+        <div style="width: 600px;"><canvas id="nul"></canvas></div>
+        <p>Ce graphique illustre les solveurs ayant le plus de difficultés à traiter les briques constituant les problèmes complexes. Avec un temps total très proche du seuil critique (souvent pénalisé par des records à 10 000 secondes par instance), ils échouent à prouver l'existence ou l'absence de solution sur une majorité de benchmarks, quel que soit le type de contraintes impliqué.</p>
+    </div>
+
+<a href="#top" class="top"><i class='bx bx-up-arrow-alt'></i></a>
+    
+
+
+    <script type="module" src="src/js/script.js"></script>
+</body>
+</html>
